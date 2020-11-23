@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="US-ASCII" ?>
 <character unique_id="keix3f2w:-f0lsdywv5xd" version="4">
 	<created_date>Aug 31, 2020</created_date>
-	<modified_date>Nov 9, 2020 5:41 PM</modified_date>
+	<modified_date>Nov 23, 2020 10:49 PM</modified_date>
 	<profile>
 		<player_name>kimvais</player_name>
 		<name>Father Skieth</name>
@@ -1097,7 +1097,7 @@ RU5ErkJggg==
 	<current_vr>0</current_vr>
 	<FP>0</FP>
 	<current_fp>9</current_fp>
-	<total_points>130</total_points>
+	<total_points>138</total_points>
 	<ST>10</ST>
 	<DX>10</DX>
 	<IQ>13</IQ>
@@ -1356,6 +1356,24 @@ RU5ErkJggg==
 					<notes compare="is anything"></notes>
 				</advantage_prereq>
 			</prereq_list>
+		</advantage>
+		<advantage version="3">
+			<name>Extra Fatigue Points</name>
+			<type>Physical</type>
+			<levels>2</levels>
+			<points_per_level>3</points_per_level>
+			<skill_type>None</skill_type>
+			<reference>B16</reference>
+			<categories>
+				<category>Advantage</category>
+				<category>Attribute</category>
+			</categories>
+			<attribute_bonus>
+				<attribute>fp</attribute>
+				<amount greatest_only="no" per_level="yes" description="" limited="no">1</amount>
+				<upto10>false</upto10>
+				<physical>true</physical>
+			</attribute_bonus>
 		</advantage>
 		<advantage version="3">
 			<name>Honest Face</name>
@@ -1695,24 +1713,6 @@ RU5ErkJggg==
 				<category>Disadvantage</category>
 			</categories>
 		</advantage>
-		<advantage version="3">
-			<name>Extra Fatigue Points</name>
-			<type>Physical</type>
-			<levels>1</levels>
-			<points_per_level>3</points_per_level>
-			<skill_type>None</skill_type>
-			<reference>B16</reference>
-			<categories>
-				<category>Advantage</category>
-				<category>Attribute</category>
-			</categories>
-			<attribute_bonus>
-				<attribute>fp</attribute>
-				<amount greatest_only="no" per_level="yes" description="" limited="no">1</amount>
-				<upto10>false</upto10>
-				<physical>true</physical>
-			</attribute_bonus>
-		</advantage>
 	</advantage_list>
 	<skill_list>
 		<skill version="3">
@@ -1760,6 +1760,26 @@ RU5ErkJggg==
 		</skill>
 		<skill version="3">
 			<name>Animal Handling</name>
+			<specialization>Equines</specialization>
+			<difficulty>IQ/A</difficulty>
+			<points>0</points>
+			<reference>B175</reference>
+			<categories>
+				<category>Animal</category>
+			</categories>
+			<default>
+				<type>IQ</type>
+				<modifier>-5</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Animal Handling</name>
+				<specialization>Ovis</specialization>
+				<modifier>-2</modifier>
+			</default>
+		</skill>
+		<skill version="3">
+			<name>Animal Handling</name>
 			<specialization>Ovis</specialization>
 			<difficulty>IQ/A</difficulty>
 			<points>1</points>
@@ -1791,10 +1811,32 @@ RU5ErkJggg==
 		</skill>
 		<skill version="3">
 			<name>Armoury</name>
+			<specialization>Body Armor</specialization>
+			<tech_level>4</tech_level>
+			<difficulty>IQ/A</difficulty>
+			<points>1</points>
+			<reference>B178</reference>
+			<categories>
+				<category>Military</category>
+				<category>Repair/Maintainance</category>
+			</categories>
+			<default>
+				<type>IQ</type>
+				<modifier>-5</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Engineer</name>
+				<specialization>Body Armor</specialization>
+				<modifier>-4</modifier>
+			</default>
+		</skill>
+		<skill version="3">
+			<name>Armoury</name>
 			<specialization>Melee Weapons</specialization>
 			<tech_level>4</tech_level>
 			<difficulty>IQ/A</difficulty>
-			<points>0</points>
+			<points>1</points>
 			<reference>B178</reference>
 			<categories>
 				<category>Military</category>
@@ -1815,7 +1857,7 @@ RU5ErkJggg==
 			<name>Background</name>
 			<skill version="3">
 				<name>Riding</name>
-				<specialization>Equine</specialization>
+				<specialization>Equines</specialization>
 				<difficulty>DX/A</difficulty>
 				<points>4</points>
 				<reference>B217</reference>
@@ -1955,6 +1997,30 @@ RU5ErkJggg==
 			</default>
 		</skill>
 		<skill version="3">
+			<name>Cloak</name>
+			<difficulty>DX/A</difficulty>
+			<points>0</points>
+			<reference>B184</reference>
+			<categories>
+				<category>Combat/Weapon</category>
+				<category>Melee Combat</category>
+			</categories>
+			<default>
+				<type>DX</type>
+				<modifier>-5</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Net</name>
+				<modifier>-4</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Shield</name>
+				<modifier>-4</modifier>
+			</default>
+		</skill>
+		<skill version="3">
 			<name>Cooking</name>
 			<difficulty>IQ/A</difficulty>
 			<points>1</points>
@@ -1969,6 +2035,35 @@ RU5ErkJggg==
 			<default>
 				<type>Skill</type>
 				<name>Housekeeping</name>
+				<modifier>-5</modifier>
+			</default>
+		</skill>
+		<skill version="3">
+			<name>Diagnosis</name>
+			<tech_level>4</tech_level>
+			<difficulty>IQ/H</difficulty>
+			<points>0</points>
+			<reference>B187</reference>
+			<categories>
+				<category>Medical</category>
+			</categories>
+			<default>
+				<type>IQ</type>
+				<modifier>-6</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>First Aid</name>
+				<modifier>-8</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Physician</name>
+				<modifier>-4</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Veterinary</name>
 				<modifier>-5</modifier>
 			</default>
 		</skill>
@@ -2134,6 +2229,26 @@ RU5ErkJggg==
 			</default>
 		</skill>
 		<skill version="3">
+			<name>Intimidation</name>
+			<difficulty>Will/A</difficulty>
+			<points>0</points>
+			<reference>B202</reference>
+			<categories>
+				<category>Criminal/Street</category>
+				<category>Police</category>
+				<category>Social</category>
+			</categories>
+			<default>
+				<type>Per</type>
+				<modifier>-5</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Acting</name>
+				<modifier>-3</modifier>
+			</default>
+		</skill>
+		<skill version="3">
 			<name>Knot-Tying</name>
 			<difficulty>DX/E</difficulty>
 			<points>1</points>
@@ -2184,7 +2299,7 @@ RU5ErkJggg==
 			<name>Naturalist</name>
 			<specialization>Earthlike</specialization>
 			<difficulty>IQ/H</difficulty>
-			<points>1</points>
+			<points>2</points>
 			<reference>B211</reference>
 			<categories>
 				<category>Animal</category>
@@ -2268,6 +2383,7 @@ RU5ErkJggg==
 			<difficulty>IQ/A</difficulty>
 			<points>0</points>
 			<reference>B212</reference>
+			<notes>Success: 1, Attempts 1</notes>
 			<categories>
 				<category>Occult/Magical</category>
 			</categories>
@@ -2391,6 +2507,19 @@ RU5ErkJggg==
 			</default>
 		</skill>
 		<skill version="3">
+			<name>Running</name>
+			<difficulty>HT/A</difficulty>
+			<points>0</points>
+			<reference>B218</reference>
+			<categories>
+				<category>Athletic</category>
+			</categories>
+			<default>
+				<type>HT</type>
+				<modifier>-5</modifier>
+			</default>
+		</skill>
+		<skill version="3">
 			<name>Search</name>
 			<difficulty>Per/A</difficulty>
 			<points>1</points>
@@ -2427,7 +2556,7 @@ RU5ErkJggg==
 			<name>Stealth</name>
 			<encumbrance_penalty_multiplier>1</encumbrance_penalty_multiplier>
 			<difficulty>DX/A</difficulty>
-			<points>1</points>
+			<points>2</points>
 			<reference>B222</reference>
 			<categories>
 				<category>Criminal/Street</category>
@@ -2523,6 +2652,33 @@ RU5ErkJggg==
 				<type>Skill</type>
 				<name>Strategy</name>
 				<modifier>-6</modifier>
+			</default>
+		</skill>
+		<skill version="3">
+			<name>Teamster</name>
+			<specialization>Equines</specialization>
+			<difficulty>IQ/A</difficulty>
+			<points>0</points>
+			<reference>B225</reference>
+			<categories>
+				<category>Animal</category>
+				<category>Vehicle</category>
+			</categories>
+			<default>
+				<type>IQ</type>
+				<modifier>-5</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Animal Handling</name>
+				<specialization>Equines</specialization>
+				<modifier>-4</modifier>
+			</default>
+			<default>
+				<type>Skill</type>
+				<name>Riding</name>
+				<specialization>Equines</specialization>
+				<modifier>-2</modifier>
 			</default>
 		</skill>
 		<skill version="3">
@@ -3713,7 +3869,7 @@ RU5ErkJggg==
 			<prereq_list all="yes">
 				<contained_weight_prereq has="yes" compare="at_most">40 lb</contained_weight_prereq>
 			</prereq_list>
-			<equipment_container version="6" open="yes" state="not_carried" def_state="equipped">
+			<equipment_container version="6" open="yes" state="carried" def_state="equipped">
 				<description>Moneybag</description>
 				<legality_class>4</legality_class>
 				<value>0</value>
@@ -3733,8 +3889,8 @@ RU5ErkJggg==
 					<is_user_hp>false</is_user_hp>
 					<user_hp>0</user_hp>
 				</material>
-				<equipment version="6" state="not_carried" def_state="equipped">
-					<quantity>8</quantity>
+				<equipment version="6" state="carried" def_state="equipped">
+					<quantity>2</quantity>
 					<description>Copper coin</description>
 					<tech_level>1</tech_level>
 					<legality_class>4</legality_class>
@@ -3761,8 +3917,8 @@ RU5ErkJggg==
 						<category>Money: GURPS Standard Medieval Coins</category>
 					</categories>
 				</equipment>
-				<equipment version="6" state="not_carried" def_state="equipped">
-					<quantity>6</quantity>
+				<equipment version="6" state="carried" def_state="equipped">
+					<quantity>2</quantity>
 					<description>Silver coin</description>
 					<tech_level>1</tech_level>
 					<legality_class>4</legality_class>
@@ -3789,8 +3945,8 @@ RU5ErkJggg==
 						<category>Money: GURPS Standard Medieval Coins</category>
 					</categories>
 				</equipment>
-				<equipment version="6" state="not_carried" def_state="equipped">
-					<quantity>8</quantity>
+				<equipment version="6" state="carried" def_state="equipped">
+					<quantity>7</quantity>
 					<description>Gold coin</description>
 					<tech_level>1</tech_level>
 					<legality_class>4</legality_class>
@@ -3848,7 +4004,7 @@ RU5ErkJggg==
 					<contained_weight_prereq has="yes" compare="at_most">2 lb</contained_weight_prereq>
 				</prereq_list>
 			</equipment_container>
-			<equipment version="6" state="not_carried" def_state="equipped">
+			<equipment version="6" state="carried" def_state="equipped">
 				<quantity>1</quantity>
 				<description>Small Knife</description>
 				<tech_level>0</tech_level>
@@ -3974,6 +4130,95 @@ RU5ErkJggg==
 				</categories>
 			</equipment>
 		</equipment_container>
+		<equipment version="6" state="equipped" def_state="equipped">
+			<quantity>1</quantity>
+			<description>Light Cloak</description>
+			<tech_level>1</tech_level>
+			<legality_class>4</legality_class>
+			<value>100</value>
+			<weight>2 lb</weight>
+			<reference>B287</reference>
+			<unliving>true</unliving>
+			<homogenous>true</homogenous>
+			<melee_weapon>
+				<damage> -</damage>
+				<strength>-</strength>
+				<striking_ST>true</striking_ST>
+				<reach>-</reach>
+				<parry>No</parry>
+				<block>+0</block>
+				<default>
+					<type>Block</type>
+					<name>Cloak</name>
+					<modifier>0</modifier>
+				</default>
+			</melee_weapon>
+			<ranged_weapon>
+				<damage> Special</damage>
+				<strength>5</strength>
+				<usage>Thrown</usage>
+				<accuracy>+1</accuracy>
+				<range>2</range>
+				<rate_of_fire>1</rate_of_fire>
+				<shots>T(1)</shots>
+				<bulk>-4</bulk>
+				<default>
+					<type>DX</type>
+					<modifier>-5</modifier>
+				</default>
+				<default>
+					<type>Skill</type>
+					<name>Cloak</name>
+					<modifier>0</modifier>
+				</default>
+				<default>
+					<type>Skill</type>
+					<name>Net</name>
+					<modifier>-4</modifier>
+				</default>
+				<default>
+					<type>Skill</type>
+					<name>Shield</name>
+					<modifier>-4</modifier>
+				</default>
+			</ranged_weapon>
+			<material>
+				<quality>Normal</quality>
+				<is_user_weights>false</is_user_weights>
+				<weight_1>3 lb</weight_1>
+				<weight_2>4 lb</weight_2>
+				<weight_3>5 lb</weight_3>
+				<weight_4>6 lb</weight_4>
+				<weight_5>7 lb</weight_5>
+				<weight_6>8 lb</weight_6>
+				<unliving>true</unliving>
+				<homogenous>false</homogenous>
+				<is_user_hp>false</is_user_hp>
+				<user_hp>0</user_hp>
+			</material>
+			<notes>Ornate +2, Kruntune themed, blue, lots of lightning bolts</notes>
+			<categories>
+				<category>Clothing</category>
+			</categories>
+			<attribute_bonus>
+				<attribute>dodge</attribute>
+				<amount>1</amount>
+				<upto10>false</upto10>
+				<physical>true</physical>
+			</attribute_bonus>
+			<attribute_bonus>
+				<attribute>parry</attribute>
+				<amount>1</amount>
+				<upto10>false</upto10>
+				<physical>true</physical>
+			</attribute_bonus>
+			<attribute_bonus>
+				<attribute>block</attribute>
+				<amount>1</amount>
+				<upto10>false</upto10>
+				<physical>true</physical>
+			</attribute_bonus>
+		</equipment>
 		<equipment_container version="6" open="yes" state="equipped" def_state="equipped">
 			<description>Equipment</description>
 			<legality_class>4</legality_class>
@@ -4015,167 +4260,13 @@ RU5ErkJggg==
 				<upto10>false</upto10>
 				<physical>true</physical>
 			</attribute_bonus>
-			<equipment version="6" state="equipped" def_state="not_carried">
-				<quantity>1</quantity>
-				<description>Mail Coif</description>
-				<tech_level>2</tech_level>
-				<legality_class>3</legality_class>
-				<value>80</value>
-				<weight>4 lb</weight>
-				<reference>B284</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>+2 DR, lighten 25%, +1 deflect</notes>
-				<categories>
-					<category>Headgear</category>
-				</categories>
-				<dr_bonus>
-					<location>skull</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>6</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-					<info_text>+4 against crushing attack</info_text>
-				</dr_bonus>
-				<dr_bonus>
-					<location>neck</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>6</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-					<info_text>+4 against crushing attack</info_text>
-				</dr_bonus>
-			</equipment>
 			<equipment version="6" state="equipped" def_state="equipped">
 				<quantity>1</quantity>
-				<description>Leather Gloves</description>
-				<tech_level>1</tech_level>
-				<legality_class>4</legality_class>
-				<value>30</value>
-				<reference>B284</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>+1
-</notes>
-				<categories>
-					<category>Gloves</category>
-				</categories>
-				<dr_bonus>
-					<location>hands</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>3</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-				</dr_bonus>
-			</equipment>
-			<equipment version="6" state="equipped" def_state="not_carried">
-				<quantity>1</quantity>
-				<description>Mail Leggings</description>
-				<tech_level>2</tech_level>
-				<legality_class>3</legality_class>
-				<value>125</value>
-				<weight>15 lb</weight>
-				<reference>B283</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>+1 DR, lighten 25%, +1 deflect</notes>
-				<categories>
-					<category>Limb Armor</category>
-				</categories>
-				<dr_bonus>
-					<location>legs</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>5</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-					<info_text>+3 against crushing attack</info_text>
-				</dr_bonus>
-			</equipment>
-			<equipment version="6" state="equipped" def_state="equipped">
-				<quantity>1</quantity>
-				<description>Mail Sleeves</description>
-				<tech_level>2</tech_level>
-				<legality_class>3</legality_class>
-				<value>70</value>
-				<weight>9 lb</weight>
-				<reference>B283</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>+2 DR, Deflect +1, Lighten -25%</notes>
-				<categories>
-					<category>Limb Armor</category>
-				</categories>
-				<dr_bonus>
-					<location>arms</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>6</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-				</dr_bonus>
-			</equipment>
-			<equipment version="6" state="equipped" def_state="not_carried">
-				<quantity>1</quantity>
-				<description>Mail Shirt</description>
+				<description>Special Mail Shirt</description>
 				<tech_level>2</tech_level>
 				<legality_class>4</legality_class>
-				<value>175</value>
-				<weight>16 lb</weight>
+				<value>1700</value>
+				<weight>12 lb</weight>
 				<reference>B283</reference>
 				<unliving>true</unliving>
 				<homogenous>true</homogenous>
@@ -4193,7 +4284,7 @@ RU5ErkJggg==
 					<is_user_hp>false</is_user_hp>
 					<user_hp>0</user_hp>
 				</material>
-				<notes>+1 DR, lighten 25%, +1 deflect</notes>
+				<notes>Expertly Fitted, DR 1, Deflect 1, Lighten 25%</notes>
 				<categories>
 					<category>Body Armor</category>
 				</categories>
@@ -4203,7 +4294,78 @@ RU5ErkJggg==
 					<amount>5</amount>
 					<upto10>false</upto10>
 					<physical>true</physical>
-					<info_text>3 against crushing attacks</info_text>
+				</dr_bonus>
+			</equipment>
+			<equipment version="6" state="equipped" def_state="equipped">
+				<quantity>1</quantity>
+				<description>Special Mail Leggings</description>
+				<tech_level>2</tech_level>
+				<legality_class>3</legality_class>
+				<value>1100</value>
+				<weight>11.25 lb</weight>
+				<reference>B283</reference>
+				<unliving>true</unliving>
+				<homogenous>true</homogenous>
+				<material>
+					<quality>Normal</quality>
+					<is_user_weights>false</is_user_weights>
+					<weight_1>3 lb</weight_1>
+					<weight_2>4 lb</weight_2>
+					<weight_3>5 lb</weight_3>
+					<weight_4>6 lb</weight_4>
+					<weight_5>7 lb</weight_5>
+					<weight_6>8 lb</weight_6>
+					<unliving>true</unliving>
+					<homogenous>false</homogenous>
+					<is_user_hp>false</is_user_hp>
+					<user_hp>0</user_hp>
+				</material>
+				<notes>Expertly Fitted, DR 2, Deflect 1, Lighten 25%</notes>
+				<categories>
+					<category>Limb Armor</category>
+				</categories>
+				<dr_bonus>
+					<location>legs</location>
+					<no_stack_with_physical>false</no_stack_with_physical>
+					<amount>6</amount>
+					<upto10>false</upto10>
+					<physical>true</physical>
+				</dr_bonus>
+			</equipment>
+			<equipment version="6" state="equipped" def_state="equipped">
+				<quantity>1</quantity>
+				<description>Special Mail Sleeves</description>
+				<tech_level>2</tech_level>
+				<legality_class>3</legality_class>
+				<value>745</value>
+				<weight>6.75 lb</weight>
+				<reference>B283</reference>
+				<unliving>true</unliving>
+				<homogenous>true</homogenous>
+				<material>
+					<quality>Normal</quality>
+					<is_user_weights>false</is_user_weights>
+					<weight_1>3 lb</weight_1>
+					<weight_2>4 lb</weight_2>
+					<weight_3>5 lb</weight_3>
+					<weight_4>6 lb</weight_4>
+					<weight_5>7 lb</weight_5>
+					<weight_6>8 lb</weight_6>
+					<unliving>true</unliving>
+					<homogenous>false</homogenous>
+					<is_user_hp>false</is_user_hp>
+					<user_hp>0</user_hp>
+				</material>
+				<notes>Expertly Fitted, DR 2, Deflect 1, Lighten 25%</notes>
+				<categories>
+					<category>Limb Armor</category>
+				</categories>
+				<dr_bonus>
+					<location>arms</location>
+					<no_stack_with_physical>false</no_stack_with_physical>
+					<amount>6</amount>
+					<upto10>false</upto10>
+					<physical>true</physical>
 				</dr_bonus>
 			</equipment>
 			<equipment version="6" state="equipped" def_state="not_carried">
@@ -4237,7 +4399,110 @@ RU5ErkJggg==
 				<dr_bonus>
 					<location>feet</location>
 					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>4</amount>
+					<amount>6</amount>
+					<upto10>false</upto10>
+					<physical>true</physical>
+				</dr_bonus>
+			</equipment>
+		</equipment_container>
+		<equipment_container version="6" open="yes" state="equipped" def_state="equipped">
+			<description>Equipment</description>
+			<legality_class>4</legality_class>
+			<value>0</value>
+			<unliving>true</unliving>
+			<homogenous>true</homogenous>
+			<material>
+				<quality>Normal</quality>
+				<is_user_weights>false</is_user_weights>
+				<weight_1>3 lb</weight_1>
+				<weight_2>4 lb</weight_2>
+				<weight_3>5 lb</weight_3>
+				<weight_4>6 lb</weight_4>
+				<weight_5>7 lb</weight_5>
+				<weight_6>8 lb</weight_6>
+				<unliving>true</unliving>
+				<homogenous>false</homogenous>
+				<is_user_hp>false</is_user_hp>
+				<user_hp>0</user_hp>
+			</material>
+			<categories>
+				<category>hups:wred=50</category>
+			</categories>
+			<equipment version="6" state="equipped" def_state="equipped">
+				<quantity>1</quantity>
+				<description>Special Mail Coif</description>
+				<tech_level>2</tech_level>
+				<legality_class>3</legality_class>
+				<value>630</value>
+				<weight>3 lb</weight>
+				<reference>B284</reference>
+				<unliving>true</unliving>
+				<homogenous>true</homogenous>
+				<material>
+					<quality>Normal</quality>
+					<is_user_weights>false</is_user_weights>
+					<weight_1>3 lb</weight_1>
+					<weight_2>4 lb</weight_2>
+					<weight_3>5 lb</weight_3>
+					<weight_4>6 lb</weight_4>
+					<weight_5>7 lb</weight_5>
+					<weight_6>8 lb</weight_6>
+					<unliving>true</unliving>
+					<homogenous>false</homogenous>
+					<is_user_hp>false</is_user_hp>
+					<user_hp>0</user_hp>
+				</material>
+				<notes>Expertly Fitted Deflect 1: Dr 2, Lighten 50%</notes>
+				<categories>
+					<category>Headgear</category>
+				</categories>
+				<dr_bonus>
+					<location>skull</location>
+					<no_stack_with_physical>false</no_stack_with_physical>
+					<amount>6</amount>
+					<upto10>false</upto10>
+					<physical>true</physical>
+				</dr_bonus>
+				<dr_bonus>
+					<location>neck</location>
+					<no_stack_with_physical>false</no_stack_with_physical>
+					<amount>6</amount>
+					<upto10>false</upto10>
+					<physical>true</physical>
+				</dr_bonus>
+			</equipment>
+			<equipment version="6" state="equipped" def_state="equipped">
+				<quantity>1</quantity>
+				<description>Special Gauntlets</description>
+				<tech_level>2</tech_level>
+				<legality_class>4</legality_class>
+				<value>1070</value>
+				<weight>1.5 lb</weight>
+				<reference>B284</reference>
+				<unliving>true</unliving>
+				<homogenous>true</homogenous>
+				<material>
+					<quality>Normal</quality>
+					<is_user_weights>false</is_user_weights>
+					<weight_1>3 lb</weight_1>
+					<weight_2>4 lb</weight_2>
+					<weight_3>5 lb</weight_3>
+					<weight_4>6 lb</weight_4>
+					<weight_5>7 lb</weight_5>
+					<weight_6>8 lb</weight_6>
+					<unliving>true</unliving>
+					<homogenous>false</homogenous>
+					<is_user_hp>false</is_user_hp>
+					<user_hp>0</user_hp>
+				</material>
+				<notes>Expertly fitted, DR 3, Deflect 1, Lighten 50%</notes>
+				<categories>
+					<category>Gloves</category>
+				</categories>
+				<dr_bonus>
+					<location>hands</location>
+					<no_stack_with_physical>false</no_stack_with_physical>
+					<amount>7</amount>
 					<upto10>false</upto10>
 					<physical>true</physical>
 				</dr_bonus>
@@ -4443,101 +4708,6 @@ RU5ErkJggg==
 				<is_user_hp>false</is_user_hp>
 				<user_hp>0</user_hp>
 			</material>
-			<equipment version="6" state="equipped" def_state="equipped">
-				<quantity>1</quantity>
-				<description>Thrusting Greatsword</description>
-				<tech_level>3</tech_level>
-				<legality_class>4</legality_class>
-				<value>3600</value>
-				<weight>7 lb</weight>
-				<reference>B274</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<melee_weapon>
-					<damage>sw+4 cut</damage>
-					<strength>12&#8224;</strength>
-					<usage>Swung</usage>
-					<striking_ST>true</striking_ST>
-					<reach>1,2</reach>
-					<parry>0</parry>
-					<block>No</block>
-					<default>
-						<type>DX</type>
-						<modifier>-5</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Two-Handed Sword</name>
-						<modifier>0</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Broadsword</name>
-						<modifier>-4</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Force Sword</name>
-						<modifier>-4</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Sword!</name>
-						<modifier>0</modifier>
-					</default>
-				</melee_weapon>
-				<melee_weapon>
-					<damage>thr+4 imp</damage>
-					<strength>12&#8224;</strength>
-					<usage>Thrust</usage>
-					<striking_ST>true</striking_ST>
-					<reach>2</reach>
-					<parry>0</parry>
-					<block>No</block>
-					<default>
-						<type>DX</type>
-						<modifier>-5</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Two-Handed Sword</name>
-						<modifier>0</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Broadsword</name>
-						<modifier>-4</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Force Sword</name>
-						<modifier>-4</modifier>
-					</default>
-					<default>
-						<type>Skill</type>
-						<name>Sword!</name>
-						<modifier>0</modifier>
-					</default>
-				</melee_weapon>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>Fine</notes>
-				<categories>
-					<category>Melee Weapon</category>
-				</categories>
-			</equipment>
 			<equipment version="6" state="not_carried" def_state="equipped">
 				<quantity>1</quantity>
 				<description>Steel Pot</description>
@@ -4649,42 +4819,6 @@ RU5ErkJggg==
 				<categories>
 					<category>Camping and Survival Gear</category>
 				</categories>
-			</equipment>
-			<equipment version="6" state="not_carried" def_state="not_carried">
-				<quantity>1</quantity>
-				<description>Gauntlets</description>
-				<tech_level>2</tech_level>
-				<legality_class>4</legality_class>
-				<value>140</value>
-				<weight>2 lb</weight>
-				<reference>B284</reference>
-				<unliving>true</unliving>
-				<homogenous>true</homogenous>
-				<material>
-					<quality>Normal</quality>
-					<is_user_weights>false</is_user_weights>
-					<weight_1>3 lb</weight_1>
-					<weight_2>4 lb</weight_2>
-					<weight_3>5 lb</weight_3>
-					<weight_4>6 lb</weight_4>
-					<weight_5>7 lb</weight_5>
-					<weight_6>8 lb</weight_6>
-					<unliving>true</unliving>
-					<homogenous>false</homogenous>
-					<is_user_hp>false</is_user_hp>
-					<user_hp>0</user_hp>
-				</material>
-				<notes>+3 DR, lighten 25%, +1 deflect</notes>
-				<categories>
-					<category>Gloves</category>
-				</categories>
-				<dr_bonus>
-					<location>hands</location>
-					<no_stack_with_physical>false</no_stack_with_physical>
-					<amount>7</amount>
-					<upto10>false</upto10>
-					<physical>true</physical>
-				</dr_bonus>
 			</equipment>
 		</equipment_container>
 	</equipment_list>
